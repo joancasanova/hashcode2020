@@ -11,9 +11,8 @@ class Library:
     def add_books(self, books_to_add):
         self.books = books_to_add
 
-    @property
-    def total_score(self):
-        return sum(self.books)
+    def total_score(self, book_score):
+        return sum([book_score[i] for i in self.books])
 
     @property
     def total_days(self):
@@ -21,3 +20,9 @@ class Library:
             (self.days_to_sign + np.floor(self.n_books / self.n_parallel_ship))
             + (0 if self.n_books % self.n_parallel_ship == 0 else 1)
         )
+
+    def cost(self):
+        pass
+
+    def __contains__(self, book):
+        return book in self.books
