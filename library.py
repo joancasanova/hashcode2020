@@ -2,11 +2,12 @@ import numpy as np
 
 
 class Library:
-    def __init__(self, n_books, days_to_sign, n_parallel_ship):
+    def __init__(self, _id, n_books, days_to_sign, n_parallel_ship):
         self.n_books = n_books
         self.days_to_sign = days_to_sign
         self.n_parallel_ship = n_parallel_ship
         self.books = None
+        self.i = _id
 
     def add_books(self, books_to_add):
         self.books = books_to_add
