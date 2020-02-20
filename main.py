@@ -5,8 +5,8 @@ import ipdb
 
 fname = "b_read_on.txt"
 problem, all_books, all_books_list = read_input(fname)
+days_consumed = 0
 while True:
-    days_consumed = 0
     book_score = {}
     library_score = {}
     scanned_books = []
@@ -35,7 +35,7 @@ with open(f"out/{fname}", "w") as f:
     for library, books in scanned_libraries:
         f.write(f"{library.i} {len(library.books)}\n")
         for book in library.books:
-            f.write(f"{book}")
+            f.write(f"{book} ")
 
         f.write("\n")
 ipdb.set_trace()

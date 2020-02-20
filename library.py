@@ -26,4 +26,4 @@ class Library:
         pass
 
     def __contains__(self, book):
-        return book in self.books
+        return book in self.books.keys()
